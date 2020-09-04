@@ -4,7 +4,7 @@ export const ListContext = createContext();
 
 function ListContextProvider(props) {
 
-    const [list, setList] = useState([])
+    const [state, setState] = useState([])
 
     const addListItem = (listItem) => {
         setState(prevState => [
@@ -20,7 +20,11 @@ function ListContextProvider(props) {
     }
 
     return(
-        <ListContext.Provider>
+        <ListContext.Provider value={{
+            state: state,
+            addListItem: addListItem,
+            deleteListItem: deleteListItem
+        }}>
             {props.children}
         </ListContext.Provider>
     )
