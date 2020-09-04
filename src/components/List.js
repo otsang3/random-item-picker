@@ -11,7 +11,7 @@ function List(props) {
     const renderList = () => {
         return(          
             <ul>
-                {state.map(item => <ListItem item={item}/>)}
+                {state.map((item, index) => <ListItem item={item} key={index} index={index}/>)}
             </ul>        
         )
     }
