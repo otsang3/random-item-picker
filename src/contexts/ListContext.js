@@ -23,14 +23,21 @@ function ListContextProvider(props) {
     }
 
     const randomiseListItem = () => {
-
+        const randomNum = Math.floor(Math.random() * state.list.length)
+        const selectedItem = state.list[randomNum]
+        setState(prevState => {
+            return {
+                ...prevState, selectedItem: selectedItem
+            }
+        })
     }
 
     return(
         <ListContext.Provider value={{
             state: state,
             addListItem: addListItem,
-            deleteListItem: deleteListItem
+            deleteListItem: deleteListItem,
+            randomiseListItem: randomiseListItem
         }}>
             {props.children}
         </ListContext.Provider>

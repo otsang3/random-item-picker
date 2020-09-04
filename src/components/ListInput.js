@@ -7,7 +7,7 @@ function ListInput() {
 
     const listContext = useContext(ListContext);
 
-    const { addListItem } = listContext
+    const { addListItem, randomiseListItem } = listContext
 
     const handleChange = (value) => {
         setValue(value)
@@ -26,6 +26,7 @@ function ListInput() {
             value={value}
             />
             <button onClick={() => handleClick()}>Add Item</button>
+            <button onClick={() => randomiseListItem()}></button>
         </div>
     )
 }
