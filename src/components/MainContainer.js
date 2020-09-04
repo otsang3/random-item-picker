@@ -5,7 +5,7 @@ import ListRandomiser from './ListRandomiser';
 function MainContainer() {
 
     return(
-        <div>
+        <div className="main-container">
             <ListInput/>
             <ListRandomiser/>
         </div>

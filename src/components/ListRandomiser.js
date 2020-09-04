@@ -8,7 +8,7 @@ function ListRandomiser() {
     const { randomiseListItem, state } = listContext;
 
     return(
-        <div>
+        <div className="col-1">
             <button onClick={() => randomiseListItem()}>Randomise</button>
             {state.selectedItem && <p>Result: {state.selectedItem}</p>}
         </div>
