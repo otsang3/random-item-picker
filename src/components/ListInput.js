@@ -1,32 +1,19 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ListContext } from '../contexts/ListContext';
 
 function ListInput() {
 
-    const [value, setValue] = useState("")
-
     const listContext = useContext(ListContext);
 
-    const { addListItem, randomiseListItem } = listContext
+    const { addListItem } = listContext
 
     const handleChange = (value) => {
-        setValue(value)
-    }
-
-    const handleClick = () => {
         addListItem(value)
-        setValue("")
     }
 
     return(
         <div>
-            <input 
-            onChange={(event) => handleChange(event.target.value)} 
-            placeholder="e.g. Titanic"
-            value={value}
-            />
-            <button onClick={() => handleClick()}>Add Item</button>
-            <button onClick={() => randomiseListItem()}></button>
+            <textarea onChange={(event) => handleChange(event.target.value)}></textarea>
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import ListInput from './ListInput';
-import List from './List';
+import ListRandomiser from './ListRandomiser';
 
 function MainContainer() {
 
     return(
         <div>
             <ListInput/>
-            <List/>
+            <ListRandomiser/>
         </div>
     )
 }

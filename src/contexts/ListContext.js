@@ -4,13 +4,13 @@ export const ListContext = createContext();
 
 function ListContextProvider(props) {
 
-    const [state, setState] = useState({selectedItem: null, list: []})
+    const [state, setState] = useState({selectedItem: null, list: ""})
 
-    const addListItem = (listItem) => {
+    const addListItem = (string) => {
         setState(prevState => {
             return {
                 ...prevState,
-                list: [...prevState.list, listItem]
+                list: string
             }
         })
     }
