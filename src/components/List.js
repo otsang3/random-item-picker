@@ -11,14 +11,14 @@ function List(props) {
     const renderList = () => {
         return(          
             <ul>
-                {state.map((item, index) => <ListItem item={item} key={index} index={index}/>)}
+                {state.list.map((item, index) => <ListItem item={item} key={index} index={index}/>)}
             </ul>        
         )
     }
 
     return(
         <div>
-            {state.length > 0 && renderList()}
+            {state.list.length > 0 && renderList()}
         </div>
     )
   

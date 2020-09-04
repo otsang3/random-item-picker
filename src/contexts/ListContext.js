@@ -4,19 +4,26 @@ export const ListContext = createContext();
 
 function ListContextProvider(props) {
 
-    const [state, setState] = useState([])
+    const [state, setState] = useState({selectedItem: null, list: []})
 
     const addListItem = (listItem) => {
-        setState(prevState => [
-            ...prevState, listItem
-        ])
+        setState(prevState => {
+            return {
+                ...prevState,
+                list: [...prevState.list, listItem]
+            }
+        })
     }
 
     const deleteListItem = (index) => {
         setState(prevState => {
-            prevState.splice(index, 1);
+            prevState.list.splice(index, 1);
             return [...prevState]
         })
+    }
+
+    const randomiseListItem = () => {
+
     }
 
     return(
