@@ -16,11 +16,12 @@ function ListContextProvider(props) {
     }
 
     const randomiseListItem = () => {
-        const randomNum = Math.floor(Math.random() * state.list.length)
-        const selectedItem = state.list[randomNum]
+        const stringArr = state.list.split("\n")
+        const randomNum = Math.floor(Math.random() * stringArr.length)
         setState(prevState => {
             return {
-                ...prevState, selectedItem: selectedItem
+                ...prevState,
+                selectedItem: stringArr[randomNum]
             }
         })
     }
