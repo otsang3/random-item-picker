@@ -5,11 +5,12 @@ function ListRandomiser() {
 
     const listContext = useContext(ListContext);
 
-    const { randomiseListItem } = listContext;
+    const { randomiseListItem, state } = listContext;
 
     return(
         <div>
-            <button onClick={() => randomiseListItem()}>Randomise List!</button>
+            <button onClick={() => randomiseListItem()}>Randomise</button>
+            {state.selectedItem && <p>Result: {state.selectedItem}</p>}
         </div>
     )
 }

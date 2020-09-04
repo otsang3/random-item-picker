@@ -13,6 +13,7 @@ function ListInput() {
 
     return(
         <div>
+            <h3>Enter a list of items separated by a new line and click on the Randomise button!</h3>
             <textarea onChange={(event) => handleChange(event.target.value)}></textarea>
         </div>
     )
