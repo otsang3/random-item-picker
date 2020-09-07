@@ -15,12 +15,6 @@ function ListContextProvider(props) {
         })
     }
 
-    const clearSelected = () => {
-        setState(prevState => {
-            return {...prevState, list: ""}
-        })
-    }
-
     const randomiseListItem = () => {
         const stringArr = state.list.split("\n")
         const randomNum = Math.floor(Math.random() * stringArr.length)
