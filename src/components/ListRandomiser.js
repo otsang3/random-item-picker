@@ -7,7 +7,7 @@ function ListRandomiser() {
 
     const listContext = useContext(ListContext);
 
-    const { clearSelected, randomiseListItem, state } = listContext;
+    const { randomiseListItem, state } = listContext;
 
     const renderResult = () => {
         if (loadToggle) {

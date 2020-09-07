@@ -30,7 +30,6 @@ function ListContextProvider(props) {
         <ListContext.Provider value={{
             state: state,
             addListItem: addListItem,
-            clearSelected: clearSelected,
             randomiseListItem: randomiseListItem
         }}>
             {props.children}
